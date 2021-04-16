@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import SelectedVideo from '../components/SelectedVideo';
+import Quiz from '../components/Quiz';
 import './trivia.scss';
 import Ron from '../Assets/Images/ron-burgundy.svg';
 function Trivia () {
@@ -13,6 +14,7 @@ function Trivia () {
             </div>
         </header>
         <SelectedVideo/>
+        <Quiz />
         </>
     )
 }

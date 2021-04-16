@@ -1,10 +1,9 @@
-import './App.css';
+import './App.scss';
 import React from 'react';
 import axios from 'axios';
 import {Switch, Route} from 'react-router-dom';
 import Home from './pages/Home';
 import Trivia from './pages/Trivia';
-import SelectedVideo from './components/SelectedVideo';
 import '../src/style/global.scss';
 
 //our API CALL
@@ -38,7 +37,7 @@ class App extends React.Component {
         <Switch>
           <Route path="/" exact component={Home}/>
           <Route path="/trivia"  component={Trivia}/>
-          <SelectedVideo />
+          
         </Switch>
       </div>
     );
