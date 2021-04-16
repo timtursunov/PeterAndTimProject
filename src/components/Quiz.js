@@ -1,23 +1,19 @@
 import React from 'react';
 import './quiz.scss';
-
-function Quiz() {
+function Quiz({questions}) {
     return (
         <section className="quiz">
+            {questions.map(question => 
             <div className="quiz__container">
-                <p className="quiz__question">How to write an IF statement in JavaScript</p>
+                <p className="quiz__question">{question.question}</p>
                 <div className="quiz__button-container">
-                    <button className="quiz__button" type="button" name="quiz-button">if i == 5 then</button>
-                    <button className="quiz__button" type="button" name="quiz-button">if i = 5 then</button>
-                    <button className="quiz__button" type="button" name="quiz-button">if (i = 5)</button>
-                    <button className="quiz__button" type="button" name="quiz-button">if i = 5</button>
+                    {question.incorrect_answers.map(answer => 
+                    <button className="quiz__button" type="button" name="quiz-button">{answer}</button>)}
+                    <button className="quiz__button" type="button" name="quiz-button">{question.correct_answer}</button>                    
                 </div>
-                <button className="quiz__next-question" type="button" name="next-question">Next Question</button>
-
-            </div>
+                <button onClick={() => {}} className="quiz__next-question" type="button" name="next-question">Next Question</button>
+            </div> )}
         </section>
     )
 }
-
 export default Quiz;
-

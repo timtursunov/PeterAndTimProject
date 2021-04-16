@@ -1,8 +1,9 @@
 .selected-video {
-    background-color: black;
-    
-    &__poster {
-        width: 900px;
-        height: 600px;
-    }
+  background-color: black;
+
+  &__poster {
+    width: 400px;
+    height: 600px;
+    height: 30vh;
+  }
 }
