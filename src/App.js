@@ -1,7 +1,10 @@
-import './App.css';
-import React from 'react'
-import axios from 'axios'
-import {Switch, Route} from 'react-router-dom'
+import './App.scss';
+import React from 'react';
+import axios from 'axios';
+import {Switch, Route} from 'react-router-dom';
+import Home from './pages/Home';
+import Trivia from './pages/Trivia';
+import '../src/style/global.scss';
 
 //our API CALL
 const API_URL = 'https://opentdb.com/api.php?amount=10&category=18'
@@ -31,8 +34,11 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <h1>The Trivia</h1>
-  
+        <Switch>
+          <Route path="/" exact component={Home}/>
+          <Route path="/trivia"  component={Trivia}/>
+          
+        </Switch>
       </div>
     );
   }
